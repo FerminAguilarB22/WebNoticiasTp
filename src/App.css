@@ -1,9 +1,30 @@
 /*  */
-.titulo{
- font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- 
+.fondo {
+  background: lightslategray;
 }
 
-.titulo:hover{
-    background-color: rgb(7, 7, 6);
+.titulo {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 3px;
+  position: relative;
+  animation-name: title;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+fondo:hover {
+  color: red;
+}
+
+@keyframes title {
+  0% {
+    left: 70%;
+  }
+  50% {
+    left: 0%;
+  }
+  100% {
+    left: -70%;
+  }
 }
