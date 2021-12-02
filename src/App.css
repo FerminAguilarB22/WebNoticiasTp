@@ -1,11 +1,12 @@
 /*  */
-.fondo {
+#fondo {
   background: lightslategray;
 }
 
 .titulo {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   letter-spacing: 3px;
+  overflow:-moz-hidden-unscrollable;
   position: relative;
   animation-name: title;
   animation-duration: 8s;
@@ -13,13 +14,11 @@
   animation-timing-function: linear;
 }
 
-fondo:hover {
-  color: red;
-}
 
-@keyframes title {
+/* @keyframes title {
   0% {
     left: 70%;
+    
   }
   50% {
     left: 0%;
@@ -27,4 +26,4 @@ fondo:hover {
   100% {
     left: -70%;
   }
-}
+} */
