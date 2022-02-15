@@ -6,20 +6,17 @@ const Buscador = () => {
   const [categoria, setCategoria] = useState("");
   const [pais, setPais] = useState("");
   const [arreglo, setArreglo] = useState([]);
-  const URL =
-    "https://newsapi.org/v2/top-headlines?country=" +
-    pais +
-    "&category=" +
-    categoria +
-    "&apiKey=1315b9c7933e46c0beb8bf0d3d31ab1e";
+  
 
   const consultarAPI = async () => {
     try {
-      const respuesta = await fetch(URL);
+      const respuesta = await fetch("https://newsapi.org/v2/top-headlines?country=" +
+      pais +
+      "&category=" +
+      categoria +
+      "&apiKey=1315b9c7933e46c0beb8bf0d3d31ab1e");
       const dato = await respuesta.json();
       setArreglo(dato.articles);
-      console.log(URL);
-      console.log(arreglo);
     } catch (error) {
       console.log(error);
     }
